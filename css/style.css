@@ -1,0 +1,124 @@
+:root {
+  --primary-family: "Space Mono", monospace;
+  --secondary-family: "Space Mono", monospace;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+.container {
+  margin: 2.5rem 4.8rem;
+}
+.top {
+  font-size: 1.5rem;
+  font-family: var(--secondary-family);
+  font-weight: bold;
+}
+.main {
+  display: flex;
+  height: 550px;
+  margin-top: 180px;
+  gap: 180px;
+  /* flex-wrap: wrap; */
+  /* justify-content: space-between; */
+}
+
+.right img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.header {
+  max-width: 700px;
+}
+.header h1 {
+  font-family: var(--primary-family);
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 5.9rem;
+  letter-spacing: 0.25rem;
+}
+.body {
+  max-width: 500px;
+}
+.body p {
+  font-family: var(--primary-family);
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 3rem;
+  letter-spacing: 0.25rem;
+}
+.footer button {
+  padding: 2.7rem 1.5rem;
+  font-size: 0.87rem;
+  font-family: var(--primary-family);
+  font-weight: 700;
+  text-transform: uppercase;
+  background: #333333;
+  color: #fff;
+  letter-spacing: 0.25rem;
+  cursor: pointer;
+}
+
+.footer button:hover {
+  transform: scale(0.98);
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    margin: 1rem 1rem !important;
+  }
+  .main {
+    flex-direction: column;
+  }
+  .footer button {
+    padding: 1.5rem 1.2rem !important;
+  }
+}
+
+@media screen and (max-width: 786px) {
+  body {
+    height: 100vh;
+    overflow: scroll;
+  }
+  .container {
+    margin: 2rem 2rem;
+  }
+  .main {
+    flex-direction: column;
+  }
+  .left .body {
+    margin-block: 45px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .main {
+    margin-top: 120px;
+    gap: 100px;
+  }
+  .header h1 {
+    font-size: 2.7rem;
+    line-height: 3.5rem;
+  }
+  .body p {
+    font-size: 1.3rem;
+    line-height: 3rem;
+  }
+
+  .footer button {
+    padding: 2.5rem 1.3rem;
+    font-size: 0.8rem;
+  }
+}
